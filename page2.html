@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Non-Metal Element Database</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        h1 {
+            color: rgb(4, 50, 136);
+        }
+
+        #form-container {
+            width: min(100%, 560px);
+            border: 5px solid rgb(17, 20, 193);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            font-size: 20px;
+        }
+
+        .info-box {
+            text-align: left;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 2px solid rgba(17, 20, 193, 0.2);
+        }
+    </style>
 </head>
 <body>
     <nav class="site-nav">
@@ -21,7 +44,7 @@
             </ul>
         </div>
     </nav>
-        <div class="container d-flex justify-content-center">
+    <main class="page-content">
         <div id="form-container">
             <h1>Non-Metal Elements</h1>
             <form class="text-start">
@@ -38,7 +61,7 @@
                 <p><b>Proper Name:</b> <span id="data_name"></span></p>
                 <p><b>Atomic Number:</b> <span id="data_number"></span></p>
                 <p><b>Atomic Weight:</b> <span id="data_weight"></span></p>
-            </div>
+            </main>
         </div>
     </div>
 
