@@ -1,18 +1,25 @@
 from pyscript import document, display
 
-membersFirst = ["Gerthy", "Jericho", "Joaquin", "Eran", "Louie", "Carlos", "Philip", "Jarvis"]
-membersLast = ["Bausa", "Magsalin", "Castor", "Diaz", "Lee", "Borromeo", "Ponce", "Joven"]
+member_pairs = (
+    ("gerthy", "bausa"),
+    ("jericho", "magsalin"),
+    ("joaquin", "castor"),
+    ("eran", "diaz"),
+    ("louie", "lee"),
+    ("carlos", "borromeo"),
+    ("philip", "ponce"),
+    ("jarvis", "joven"),
+)
 
-def checkers_membershippers (e):
-    document.getElementById("result").innerHTML = ""
-    document.getElementById("first").value
-    document.getElementById("last").value
-    
-    membersF = document.getElementById("first").value
-    membersL = document.getElementById("last").value
-
-    full_name = membersF + " " + membersL
-
+def checkers_membershippers(e):
+    members_f = document.getElementById("first").value.strip()
+    members_l = document.getElementById("last").value.strip()
     result = document.getElementById("result")
 
-    result.innerText = "Sorry " + full_name + ", your name is not on the list."
+    is_member = member_pairs.count((members_f.casefold(), members_l.casefold()))
+    messages = (
+        f"Sorry {members_f} {members_l}, your name is not on the list.",
+        f"Welcome {members_f} {members_l}, you are on the list.",
+    )
+    result.innerText = messages[is_member]
+
