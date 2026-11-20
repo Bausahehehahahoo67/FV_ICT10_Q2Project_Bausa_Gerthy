@@ -24,7 +24,7 @@ def checkers_membershippers(e):
     result.innerText = messages[is_member]
 
 #DRILL2
-original_members = {"Gerthy Bruces Bausa", "Jericho Tuvieron Magsalin", "Joaquin Gabriel Mallari Castor", "Eran James Sangayab Diaz V", "Louie Vonn Medrana Lee", "Carlos Ezequiel Barja Borromeo", "Philip Joaquin Ponce"} #the original team
+original_members = {"Gerthy Bruces Bausa", "Jericho Tuvieron Magsalin", "Joaquin Gabriel Mallari Castor", "Eran James Sangayab Diaz V", "Louie Vonn Medrana Lee", "Carlos Ezequiel Barja Borromeo (Leader)", "Philip Joaquin Ponce"} #the original team
 
 def add_club_member(e):
     First = document.getElementById("first").value #gets user input on firstname field
