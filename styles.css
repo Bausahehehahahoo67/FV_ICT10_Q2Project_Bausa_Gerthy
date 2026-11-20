@@ -5,6 +5,12 @@
     --border-color: #dee2e6;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     min-height: 100vh;
     margin: 0;
@@ -81,6 +87,7 @@ body {
 }
 
 .form-container {
+    width: 100%;
     border: 5px solid rgb(17, 20, 193);
     border-radius: 16px;
     padding: 2rem;
@@ -110,6 +117,33 @@ button {
 #result {
     min-height: 1.5em;
     margin-top: 1rem;
+}
+
+.element-form {
+    text-align: left;
+}
+
+.element-form label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+}
+
+.element-form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.element-form button {
+    display: block;
+    width: 100%;
+}
+
+#element-result {
+    min-height: 1.5em;
+    margin-top: 1rem;
+    color: #b02a37;
 }
 
 @media (max-width: 900px) {

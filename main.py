@@ -57,9 +57,13 @@ nonmets = {
 # The full names represent Keys, the tuples are values describing (symbols index 0, atomic numbers index 1, atomic weight index 2)
 
 def locate_element(e): #defining my own function, which is to locate elements
-    Element = document.getElementById("nonmets").value #collects user input
-    result = nonmets.get(Element, ("Element not found", "-","-")) #validates user input if it matches anything in "nonmets" databse, other wise results to fallback
-    document.getElementById("data_name").innerText = Element #gets name
-    document.getElementById("data_symbol").innerText = result[0] #gets index 0
-    document.getElementById("data_number").innerText = result[1] #gets index 1
-    document.getElementById("data_weight").innerText = result[2] #gets index 2
+    Element = document.getElementById("nonmets").value.strip().title() #collects and normalizes user input
+    result = nonmets.get(Element, ("Element not found", "-", "-")) #looks up the element or uses the fallback
+    document.getElementById("data_name").innerText = Element
+    document.getElementById("data_symbol").innerText = result[0]
+    document.getElementById("data_number").innerText = result[1]
+    document.getElementById("data_weight").innerText = result[2]
+    document.getElementById("element-result").innerText = (
+        "",
+        "Element not found, Try again",
+    )[result[0] == "Element not found"]
