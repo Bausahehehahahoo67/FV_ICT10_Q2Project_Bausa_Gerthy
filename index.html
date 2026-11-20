@@ -3,107 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
-    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script><title>ICT 10</title>
-    <style>
-        :root {
-            --brand-primary: rgb(4, 50, 136);
-            --text-muted: #6c757d;
-            --text-dark: #212529;
-            --border-color: #dee2e6;
-        }
-
-        body {
-            text-align: center;
-            background-image: url('https://i.ytimg.com/vi/iyIqivdryA8/maxresdefault.jpg');
-            background-size: cover;
-            background-position: center;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
-            justify-content: flex-start;
-        }
-
-        .navbar {
-            padding: 0.8rem 2rem;
-            border-bottom: 1px solid var(--border-color);
-            background-color: #ffffff;
-        }
-
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-            font-weight: 700;
-            color: var(--text-dark);
-            text-decoration: none;
-            font-size: 1.1rem;
-        }
-
-        .nav-link {
-            color: var(--text-muted) !important;
-            font-weight: 500;
-            margin: 0 10px;
-        }
-
-        .nav-link.active-page {
-            color: var(--brand-primary) !important;
-            font-weight: 700;
-        }
-
-        #logo {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            margin-left: 10px;
-            object-fit: cover;
-        }
-
-        h1 {
-            color: rgb(4, 50, 136);
-        }
-
-        #form-container {
-            width: min(100%, 560px);
-            border: 5px solid rgb(17, 20, 193);
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-            border-radius: 16px;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 2rem;
-            font-size: 20px;
-        }
-
-        .info-box {
-            text-align: left;
-            margin-top: 1.5rem;
-            padding-top: 1rem;
-            border-top: 2px solid rgba(17, 20, 193, 0.2);
-        }
-    </style>
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Club Member Verification</title>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid px-4">
+    <nav class="site-nav">
+        <div class="site-nav-inner">
             <a class="navbar-brand" href="index.html">
                 The Bradarian Collective Club
                 <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/5dd0922b-11ae-4ea0-b1e6-193e9471bdb4/d4lfdge-55c29181-a986-42cf-b822-eebfde5b2010.jpg" id="logo" alt="Logo">
             </a>
-            <div class="collapse navbar-collapse justify-content-end show">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active-page" href="index.html">Home Page</a></li>
-                    <li class="nav-item"><a class="nav-link" href="members page.html">Club Leaders and Members</a></li>
-                    <li class="nav-item"><a class="nav-link" href="elements finder.html">Non-Metal Element Database</a></li>
-                    <li class="nav-item"><a class="nav-link" href="creator page.html">Meet the Creator</a></li>
-                </ul>
-            </div>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link active-page" href="index.html" aria-current="page">Home Page</a></li>
+                <li class="nav-item"><a class="nav-link" href="page1.html">Club Leaders and Members</a></li>
+                <li class="nav-item"><a class="nav-link" href="page2.html">Non-Metal Element Database</a></li>
+                <li class="nav-item"><a class="nav-link" href="page3.html">Meet the Creator</a></li>
+            </ul>
         </div>
     </nav>
     
-    <div class="container d-flex justify-content-center align-items-center flex-grow-1">
-        <div id="form-container">
+    <main class="page-content">
+        <div class="form-container">
                 <h1>Sir Aljo Club Member Verification System</h1>
       <form action="">
          <input type="text" id="first" placeholder="Please enter First Name">
@@ -114,8 +37,8 @@
       </form>
         <br>
         <div id="result"></div>
-         </div>
-    </div>
+        </div>
+    </main>
 
     <script type="py" src="main.py"></script>
 </body>

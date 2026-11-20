@@ -1,0 +1,123 @@
+:root {
+    --brand-primary: rgb(4, 50, 136);
+    --text-muted: #6c757d;
+    --text-dark: #212529;
+    --border-color: #dee2e6;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-image: url("https://i.ytimg.com/vi/iyIqivdryA8/maxresdefault.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.site-nav {
+    padding: 0.8rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+    background-color: #ffffff;
+}
+
+.site-nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.navbar-brand {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+#logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-left: 10px;
+    object-fit: cover;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.5rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link.active-page {
+    color: var(--brand-primary);
+}
+
+.nav-link.active-page {
+    font-weight: 700;
+}
+
+.page-content {
+    width: min(calc(100% - 2rem), 560px);
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.form-container {
+    border: 5px solid rgb(17, 20, 193);
+    border-radius: 16px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+}
+
+h1 {
+    color: var(--brand-primary);
+}
+
+input {
+    max-width: 100%;
+    padding: 0.5rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: 0;
+    border-radius: 6px;
+    background-color: var(--brand-primary);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#result {
+    min-height: 1.5em;
+    margin-top: 1rem;
+}
+
+@media (max-width: 900px) {
+    .site-nav-inner {
+        flex-direction: column;
+    }
+
+    .navbar-nav {
+        justify-content: center;
+    }
+}

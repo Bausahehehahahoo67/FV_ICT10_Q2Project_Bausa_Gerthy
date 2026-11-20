@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Checker (Sets)</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css"/>
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="site-nav-inner">
+            <a class="navbar-brand" href="index.html">
+                The Bradarian Collective Club
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/5dd0922b-11ae-4ea0-b1e6-193e9471bdb4/d4lfdge-55c29181-a986-42cf-b822-eebfde5b2010.jpg" id="logo" alt="Logo">
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home Page</a></li>
+                <li class="nav-item"><a class="nav-link active-page" href="page1.html" aria-current="page">Club Leaders and Members</a></li>
+                <li class="nav-item"><a class="nav-link" href="page2.html">Non-Metal Element Database</a></li>
+                <li class="nav-item"><a class="nav-link" href="page3.html">Meet the Creator</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="page-content">
+      <section class="form-container">
+    <h1>Sir Aljo Club Member System</h1>
+      <form action="">
+         <p>First Name</p>
+         <input type="text" id="first" placeholder="E.G John">
+         <br>
+         <p>Last Name</p>
+         <input type="text" id="last" placeholder="E.G Doe">
+         <br>
+         <button type="button" py-click="add_club_member">Add Member</button>
+    </form>
+    <br>
+     
+    <p>Members:</p>
+    <div id="result"></div>
+      </section>
+    </main>
+    <script type="py" src="main.py"></script> 
+</body>
+</html>
