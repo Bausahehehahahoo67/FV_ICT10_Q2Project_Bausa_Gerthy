@@ -59,11 +59,11 @@ nonmets = {
 def locate_element(e): #defining my own function, which is to locate elements
     Element = document.getElementById("nonmets").value.strip().title() #collects and normalizes user input
     result = nonmets.get(Element, ("Element not found", "-", "-")) #looks up the element or uses the fallback
-    document.getElementById("data_name").innerText = Element
-    document.getElementById("data_symbol").innerText = result[0]
-    document.getElementById("data_number").innerText = result[1]
-    document.getElementById("data_weight").innerText = result[2]
+    document.getElementById("data_name").innerText = Element #gets name
+    document.getElementById("data_symbol").innerText = result[0] #gets index 0
+    document.getElementById("data_number").innerText = result[1] #gets index 1
+    document.getElementById("data_weight").innerText = result[2] #gets index 2
     document.getElementById("element-result").innerText = (
         "",
         "Element not found, Try again",
-    )[result[0] == "Element not found"]
+    )[result[0] == "Element not found"] #this validates the user's name, if not found, the message above will be presented
